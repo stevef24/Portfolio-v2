@@ -1,10 +1,29 @@
-import { motion } from "framer-motion";
-import { useSpring } from "framer-motion";
+import { motion, useAnimate, stagger } from "framer-motion";
+import Link from "next/link";
+import { useEffect } from "react";
 
 type OpenMenuProps = {
 	setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
 	isActive: boolean;
 };
+
+const links = [
+	{
+		id: 1,
+		name: "Home",
+		href: "/",
+	},
+	{
+		id: 2,
+		name: "Blog",
+		href: "/blog",
+	},
+	{
+		id: 3,
+		name: "Project",
+		href: "/project",
+	},
+];
 
 const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 	return (
@@ -21,7 +40,7 @@ const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 				scale: [0, 0.5, 1],
 				borderRadius: "0 0 0 0",
 			}}
-			transition={{ duration: 0.2 }}
+			transition={{ duration: 0.2, ease: "easeInOut" }}
 			exit={{ opacity: 0, x: "-100%", scale: 0.5, borderRadius: "0 50% 50% 0" }}
 			className="absolute top-0 left-0 w-full h-full bg-primary"
 		>
@@ -44,11 +63,28 @@ const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 					/>
 				</svg>
 			</button>
-			<motion.div className="relative w-full h-full top-20">
-				<motion.ul className="grid items-center justify-center text-background">
-					<motion.li>Home</motion.li>
-					<motion.li>Blog</motion.li>
-					<motion.li>Project</motion.li>
+			<motion.div
+				className="relative w-full top-20"
+				transition={{ duration: 0.5, delay: 0.2 }}
+			>
+				<motion.ul className="grid items-end justify-start w-full p-10 text-background">
+					{links.map((link, i) => (
+						<motion.li
+							key={link.id}
+							initial={{ opacity: 0, translateX: -200 }}
+							animate={{ opacity: 1, translateX: 0 }}
+							transition={{
+								duration: 0.5,
+								delay: i * 0.5,
+								type: "spring",
+								stiffness: 100,
+							}}
+						>
+							<Link href={link.href} className="font-bold text-7xl">
+								{link.name}
+							</Link>
+						</motion.li>
+					))}
 				</motion.ul>
 			</motion.div>
 		</motion.div>
