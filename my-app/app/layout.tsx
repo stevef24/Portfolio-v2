@@ -1,8 +1,8 @@
-import Navbar from "@/components/navbar/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import Navbar from "@/components/navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +17,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en scroll-smooth">
+		<html lang="en smoot">
 			<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 				<body className={inter.className}>
 					<Navbar />

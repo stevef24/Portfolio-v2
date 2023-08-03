@@ -1,6 +1,7 @@
-import { ModeToggle } from "../theme-toggler";
+import { ModeToggle } from "@/components/theme-toggler";
 import Image from "next/image";
-import ResponsiveMenu from "./responsiveMenu";
+import ResponsiveMenu from "@/components/navbar/responsiveMenu";
+import NavSlider from "./navSlider";
 const Navbar = () => {
 	return (
 		<div className="container">
@@ -9,11 +10,7 @@ const Navbar = () => {
 					<ResponsiveMenu />
 				</div>
 				<div className="hidden col-span-1 lg:justify-start lg:flex lg:col-span-2">
-					<ul className="justify-center hidden lg:col-span-4 lg:gap-x-8 xl:gap-x-10 lg:flex">
-						<li>Home</li>
-						<li>Blog</li>
-						<li>Project</li>
-					</ul>
+					<NavSlider />
 				</div>
 				<div className="flex justify-center col-span-4 lg:col-span-2 lg:justify-center">
 					<Image src="/Logo.png" alt="Logo image" width={120} height={120} />
