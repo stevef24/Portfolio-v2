@@ -1,14 +1,13 @@
 "use client";
 import OpenMenu from "./OpenMenu";
-import styles from "./responsiveMenu.module.scss";
-import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 export default function ResponsiveMenu() {
-	const [isActive, setIsActive] = useState(true);
+	const [isActive, setIsActive] = useState(false);
 
 	return (
-		<>
+		<main>
 			<button
 				onClick={() => {
 					setIsActive(!isActive);
@@ -41,9 +40,9 @@ export default function ResponsiveMenu() {
 					/>
 				</svg>
 			</button>
-			<AnimatePresence>
+			<AnimatePresence mode="wait">
 				{isActive && <OpenMenu setIsActive={setIsActive} isActive={isActive} />}
 			</AnimatePresence>
-		</>
+		</main>
 	);
 }

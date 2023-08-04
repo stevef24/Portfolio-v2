@@ -19,8 +19,8 @@ const links = [
 	},
 	{
 		id: 3,
-		name: "Project",
-		href: "/project",
+		name: "Projects",
+		href: "/projects",
 	},
 ];
 
@@ -39,7 +39,7 @@ const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 				scale: [0, 0.5, 1],
 				borderRadius: "0 0 0 0",
 			}}
-			transition={{ duration: 0.2, ease: "easeInOut" }}
+			transition={{ duration: 0.3, ease: "easeInOut" }}
 			exit={{ opacity: 0, x: "-100%", scale: 0.5, borderRadius: "0 50% 50% 0" }}
 			className="absolute top-0 left-0 z-20 w-full h-full bg-primary"
 		>
@@ -79,7 +79,11 @@ const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 								stiffness: 100,
 							}}
 						>
-							<Link href={link.href} className="font-bold text-7xl">
+							<Link
+								href={link.href}
+								className="font-bold text-7xl"
+								onClick={() => setIsActive(!isActive)}
+							>
 								{link.name}
 							</Link>
 						</motion.li>

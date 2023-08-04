@@ -18,7 +18,7 @@ const NavSlider = () => {
 	let [active, setActive] = useState(links[0].id);
 	return (
 		<div>
-			<ul className="justify-center hidden lg:col-span-4 lg:flex">
+			<div className="justify-center hidden lg:col-span-4 lg:flex">
 				{links.map((link, i) => (
 					<Link
 						href={link.href}
@@ -29,15 +29,19 @@ const NavSlider = () => {
 						} relative rounded-full px-3 py-1.5 text-sm font-medium text0white outline-2 outline-green-500 focus-visible:outline`}
 					>
 						{active === link.id && (
-							<motion.div
+							<motion.span
 								layoutId="green-pill"
 								className="absolute inset-0 bg-green-500 rounded-full "
-							></motion.div>
+								style={{
+									borderRadius: "9999",
+								}}
+								transition={{ duration: 0.5, type: "spring" }}
+							></motion.span>
 						)}
-						<span className="relative z-10">{link.name}</span>
+						<span className="relative z-10 ">{link.name}</span>
 					</Link>
 				))}
-			</ul>
+			</div>
 		</div>
 	);
 };
