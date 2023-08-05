@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 type OpenMenuProps = {
 	setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
@@ -79,13 +78,13 @@ const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 								stiffness: 100,
 							}}
 						>
-							<Link
+							<motion.a
 								href={link.href}
-								className="font-bold transition duration-200 ease-in-out transform cursor-pointer text-primary text-7xl hover:scale-110 hover:text-green-500"
+								className="font-bold transition duration-500 ease-linear transform cursor-pointer hover:text-transparent text-primary text-7xl bg-clip-text hover:bg-gradient-to-r from-green-400 to-teal-400"
 								onClick={() => setIsActive(!isActive)}
 							>
 								{link.name}
-							</Link>
+							</motion.a>
 						</motion.li>
 					))}
 				</motion.ul>

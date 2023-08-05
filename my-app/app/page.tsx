@@ -1,12 +1,11 @@
+import About from "@/components/About/About";
 import Hero from "@/components/Hero/hero";
 
 const Home = () => {
 	return (
-		<main className="w-full h-full">
+		<main className="container">
 			<Hero />
-			<Hero />
-			<Hero />
-			<Hero />
+			<About />
 		</main>
 	);
 };

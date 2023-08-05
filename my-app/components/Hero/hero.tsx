@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import MainButton from "../button";
+import MainButton from "../buttonPremium";
 import Reveal from "../reveal";
 
 const Hero = () => {
 	return (
-		<section className="container px-8 py-24 overflow-hidden text-primary md:px-12 md:py-32">
+		<section className="px-8 py-24 overflow-hidden text-primary md:px-12 md:py-32">
 			<div className="flex flex-col items-center justify-center space-y-10">
 				<div>
 					<Reveal>

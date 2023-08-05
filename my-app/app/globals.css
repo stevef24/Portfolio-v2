@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+	::selection {
+		background: rgb(77, 224, 124);
+		color: black;
+	}
+
 	:root {
 		--text-xs: 1.6rem;
 		--text-sm: 1.8rem;
