@@ -41,16 +41,16 @@ const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 			}}
 			transition={{ duration: 0.3, ease: "easeInOut" }}
 			exit={{ opacity: 0, x: "-100%", scale: 0.5, borderRadius: "0 50% 50% 0" }}
-			className="absolute top-0 left-0 z-20 w-full h-full bg-primary"
+			className="absolute top-0 left-0 z-20 w-full h-full bg-background"
 		>
 			<button
 				onClick={() => {
 					setIsActive(!isActive);
 				}}
-				className="relative p-4 transition duration-200 ease-in-out transform border rounded-full cursor-pointer hover:fill-green-500 hover:border hover:border-green-500 top-4 left-7 border-rounded-full hover:rotate-180"
+				className="relative p-4 transition duration-200 ease-in-out transform border rounded-full cursor-pointer group hover:fill-green-500 hover:border hover:border-green-500 top-4 left-7 border-rounded-full hover:rotate-180"
 			>
 				<svg
-					className="w-4 h-4 fill-background"
+					className="w-4 h-4 fill-primary group-hover:fill-green-500"
 					version="1.1"
 					id="Capa_1"
 					xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 				className="relative w-full h-3/4 top-20"
 				transition={{ duration: 0.5, delay: 0.2 }}
 			>
-				<motion.ul className="flex flex-col items-start justify-center w-full h-full p-10 text-background">
+				<motion.ul className="flex flex-col items-start justify-center w-full h-full p-10 space-y-4 text-background">
 					{links.map((link, i) => (
 						<motion.li
 							key={link.id}
@@ -81,7 +81,7 @@ const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 						>
 							<Link
 								href={link.href}
-								className="font-bold text-7xl"
+								className="font-bold transition duration-200 ease-in-out transform cursor-pointer text-primary text-7xl hover:scale-110 hover:text-green-500"
 								onClick={() => setIsActive(!isActive)}
 							>
 								{link.name}

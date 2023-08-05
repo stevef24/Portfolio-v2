@@ -1,13 +1,12 @@
 import { ModeToggle } from "@/components/theme-toggler";
-import Image from "next/image";
 import ResponsiveMenu from "@/components/navbar/responsiveMenu";
 import NavSlider from "./navSlider";
 import Link from "next/link";
 const Navbar = () => {
 	return (
-		<main className="container">
-			<nav className="grid items-center h-20 grid-cols-6 gap-3 lg:justify-center">
-				<div className="lg:hidden">
+		<main className="container ">
+			<nav className="grid items-center h-20 grid-cols-6 gap-3 lg:justify-center ">
+				<div className=" lg:hidden">
 					<ResponsiveMenu />
 				</div>
 				<div className="hidden col-span-1 lg:justify-start lg:flex lg:col-span-2">

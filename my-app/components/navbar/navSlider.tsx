@@ -31,7 +31,7 @@ const NavSlider = () => {
 						{active === link.id && (
 							<motion.span
 								layoutId="green-pill"
-								className="absolute inset-0 bg-green-500 rounded-full "
+								className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-teal-400 "
 								style={{
 									borderRadius: "9999",
 								}}
