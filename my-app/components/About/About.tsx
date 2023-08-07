@@ -1,5 +1,7 @@
 import Reveal from "../reveal";
 import SectionHeader from "../sectionHeader";
+import LogoContainer from "../Cards/logoContainer";
+import CardCarousal from "../cardCarousal";
 
 const About = () => {
 	return (
@@ -8,9 +10,9 @@ const About = () => {
 				<SectionHeader title={"About"} order={"flex-row"} />
 			</Reveal>
 
-			<div className="grid">
+			<div className="container">
 				<Reveal>
-					<p className="mt-6">
+					<p className="mt-6 ">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam et
 						impedit, laudantium aperiam modi quasi dignissimos recusandae,
 						ducimus excepturi illum voluptatum praesentium at, omnis incidunt
@@ -19,6 +21,10 @@ const About = () => {
 						doloremque aperiam cum eaque culpa molestias fuga.
 					</p>
 				</Reveal>
+
+				<div className="flex items-center justify-center">
+					<CardCarousal />
+				</div>
 			</div>
 		</>
 	);
