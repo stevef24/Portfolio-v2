@@ -19,7 +19,7 @@ export default function RootLayout({
 	return (
 		<html lang="en smoot" suppressHydrationWarning={true}>
 			<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-				<body className={poppins.className}>
+				<body className={`${poppins.className} `}>
 					<Navbar />
 					{children}
 				</body>

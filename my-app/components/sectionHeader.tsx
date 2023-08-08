@@ -1,5 +1,3 @@
-import Reveal from "./reveal";
-
 type SectionHeaderProps = {
 	title: string;
 	order: string;
@@ -14,7 +12,7 @@ const SectionHeader = ({ title, order }: SectionHeaderProps) => {
 					.
 				</span>
 			</h3>
-			<div className="w-full h-[1px] bg-white/20" />
+			<div className="w-full h-[1px] dark:bg-white/20 bg-primary/20" />
 		</div>
 	);
 };
