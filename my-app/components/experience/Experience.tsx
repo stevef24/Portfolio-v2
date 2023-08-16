@@ -13,11 +13,11 @@ const Experience = () => {
 				<Reveal>
 					<WorkExperienceSection
 						companyName={"Nationwide Building Society"}
-						dateFrom={"dateFrom"}
-						dateTo={"dateTo"}
-						role={"role"}
+						dateFrom={"2023"}
+						dateTo={"Present"}
+						role={"Software Engineer"}
 						roleDescription={"roleDescription"}
-						location={"location"}
+						location={"Remote"}
 					/>
 				</Reveal>
 			}
