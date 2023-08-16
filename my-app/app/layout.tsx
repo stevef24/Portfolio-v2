@@ -4,7 +4,7 @@ import { Poppins } from "@next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar/Navbar";
 
-const poppins = Poppins({ weight: "600", subsets: ["latin"] });
+const poppins = Poppins({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Create Next App",

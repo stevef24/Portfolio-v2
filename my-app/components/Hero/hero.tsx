@@ -8,7 +8,7 @@ const Hero = () => {
 			<div className="flex flex-col items-center justify-center space-y-10">
 				<div>
 					<Reveal>
-						<h1 className="text-6xl font-bold md:text-8xl">
+						<h1 className="text-5xl font-bold md:text-6xl lg:text-8xl">
 							Hi 👋🏽, I'm Stav
 							<span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400">
 								.
@@ -26,7 +26,7 @@ const Hero = () => {
 						</h2>
 					</Reveal>
 					<Reveal>
-						<p className="text-center">
+						<p className="text-justify md:text-center ">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
 							voluptatum hic delectus facilis quaerat, consequuntur eveniet quia
 							assumenda adipisci totam! Lorem ipsum dolor sit amet consectetur

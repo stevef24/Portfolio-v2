@@ -1,6 +1,5 @@
 import Reveal from "../reveal";
 import SectionHeader from "../sectionHeader";
-import LogoContainer from "../Cards/logoContainer";
 import CardCarousal from "../cardCarousal";
 
 const About = () => {
@@ -12,7 +11,7 @@ const About = () => {
 
 			<div className="container">
 				<Reveal>
-					<p className="mt-6 ">
+					<p className="mt-6 text-justify md:text-center ">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam et
 						impedit, laudantium aperiam modi quasi dignissimos recusandae,
 						ducimus excepturi illum voluptatum praesentium at, omnis incidunt
@@ -29,7 +28,5 @@ const About = () => {
 		</>
 	);
 };
-
-
 
 export default About;
