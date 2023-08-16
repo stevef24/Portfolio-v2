@@ -17,7 +17,7 @@ const WorkExperienceSection = ({
 	location,
 }: WorkExperienceSectionProps) => {
 	return (
-		<section className="container w-full">
+		<section className="w-full">
 			<div className="flex justify-between w-full">
 				<h3 className="text-xl font-bold ">{companyName}</h3>
 				<p>

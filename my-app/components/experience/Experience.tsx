@@ -5,12 +5,12 @@ import WorkExperienceSection from "./WorkExperienceSection";
 
 const Experience = () => {
 	return (
-		<>
+		<section>
 			<Reveal width="100%">
 				<SectionHeader title={"Experience"} order={"flex-row-reverse"} />
 			</Reveal>
 			{
-				<Reveal>
+				<Reveal width="100%">
 					<WorkExperienceSection
 						companyName={"Nationwide Building Society"}
 						dateFrom={"2023"}
@@ -21,7 +21,7 @@ const Experience = () => {
 					/>
 				</Reveal>
 			}
-		</>
+		</section>
 	);
 };
 
