@@ -38,12 +38,9 @@ const Hero = () => {
 						</p>
 					</Reveal>
 				</div>
-				{/* <Reveal> */}
-				{/* <MainButton title="Projects" /> */}
-				<Canvas>
-					<Scene />
-				</Canvas>
-				{/* </Reveal> */}
+				<Reveal>
+					<MainButton title="Projects" />
+				</Reveal>
 			</div>
 		</section>
 	);

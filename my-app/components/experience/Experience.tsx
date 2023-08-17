@@ -5,7 +5,7 @@ import WorkExperienceSection from "./WorkExperienceSection";
 
 const Experience = () => {
 	return (
-		<section>
+		<section className="flex flex-col ">
 			<Reveal width="100%">
 				<SectionHeader title={"Experience"} order={"flex-row-reverse"} />
 			</Reveal>
@@ -16,7 +16,9 @@ const Experience = () => {
 						dateFrom={"2023"}
 						dateTo={"Present"}
 						role={"Software Engineer"}
-						roleDescription={"roleDescription"}
+						roleDescription={
+							"Completed an intensive JavaScript-focused Coding Bootcamp covering programming, full-stack and front-end web development using React.js, back-end web development, and more. Gained hands-on experience in Git, HTML5, CSS, OOP, and Node.js. Developed a high level of proficiency in various aspects of web development through practical application."
+						}
 						location={"Remote"}
 					/>
 				</Reveal>

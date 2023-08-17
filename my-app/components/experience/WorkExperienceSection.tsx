@@ -17,15 +17,15 @@ const WorkExperienceSection = ({
 	location,
 }: WorkExperienceSectionProps) => {
 	return (
-		<section className="w-full">
-			<div className="flex justify-between w-full">
+		<section className="flex flex-col w-full">
+			<div className="flex items-center justify-between w-full space-y-1">
 				<h3 className="text-xl font-bold ">{companyName}</h3>
 				<p>
 					{dateFrom}-{dateTo}
 				</p>
 			</div>
-			<div>
-				<h4 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400 ">
+			<div className="flex items-center justify-between w-full space-y-4">
+				<h4 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-400">
 					{role}
 				</h4>
 				<p>{location}</p>

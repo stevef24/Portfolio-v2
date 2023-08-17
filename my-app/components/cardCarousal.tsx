@@ -5,7 +5,7 @@ const CardCarousal = () => {
 	const arr = new Array(100).fill(0);
 	return (
 		<>
-			<div className={`${styles.slider} `}>
+			<div className={`${styles.slider}`}>
 				<div className={`${styles.sliderTrack}`}>
 					{arr.map((i) => {
 						return <LogoContainer key={i} />;

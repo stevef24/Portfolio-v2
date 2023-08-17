@@ -4,7 +4,7 @@ import CardCarousal from "../cardCarousal";
 
 const About = () => {
 	return (
-		<>
+		<section>
 			<Reveal width="100%">
 				<SectionHeader title={"About"} order={"flex-row"} />
 			</Reveal>
@@ -21,11 +21,11 @@ const About = () => {
 					</p>
 				</Reveal>
 
-				<div className="flex items-center justify-center">
+				<div>
 					<CardCarousal />
 				</div>
 			</div>
-		</>
+		</section>
 	);
 };
 
