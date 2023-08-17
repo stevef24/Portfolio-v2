@@ -1,6 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client";
 import MainButton from "../buttonPremium";
 import Reveal from "../reveal";
+import Scene from "./ThreeModel";
+import { Canvas } from "@react-three/fiber";
 
 const Hero = () => {
 	return (
@@ -35,9 +38,12 @@ const Hero = () => {
 						</p>
 					</Reveal>
 				</div>
-				<Reveal>
-					<MainButton title="Projects" />
-				</Reveal>
+				{/* <Reveal> */}
+				{/* <MainButton title="Projects" /> */}
+				<Canvas>
+					<Scene />
+				</Canvas>
+				{/* </Reveal> */}
 			</div>
 		</section>
 	);
