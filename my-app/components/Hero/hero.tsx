@@ -1,13 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-import MainButton from "../buttonPremium";
 import Reveal from "../reveal";
-import Scene from "./ThreeModel";
-import { Canvas } from "@react-three/fiber";
+import dynamic from "next/dynamic";
 
 const Hero = () => {
+	const Spline = dynamic(() => import("./ThreeModel"), { ssr: false });
 	return (
-		<section className="px-8 py-24 overflow-hidden text-primary md:px-12 md:py-32">
+		<section className="px-8 py-24 overflow-hidden text-primary md:px-12 md:py-12">
 			<div className="flex flex-col items-center justify-center space-y-10">
 				<div>
 					<Reveal>
@@ -39,7 +38,7 @@ const Hero = () => {
 					</Reveal>
 				</div>
 				<Reveal>
-					<MainButton title="Projects" />
+					<div className="w-[900px] h-[450px]">{<Spline />}</div>
 				</Reveal>
 			</div>
 		</section>
