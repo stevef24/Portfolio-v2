@@ -5,9 +5,7 @@ import CardCarousal from "../cardCarousal";
 const About = () => {
 	return (
 		<section>
-			<Reveal width="100%">
-				<SectionHeader title={"About"} order={"flex-row"} />
-			</Reveal>
+			<SectionHeader title={"Tools"} order={"flex-row"} />
 
 			<div className="container">
 				<Reveal>
