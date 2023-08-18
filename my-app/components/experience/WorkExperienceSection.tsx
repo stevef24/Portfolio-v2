@@ -17,6 +17,7 @@ const WorkExperienceSection = ({
 	role,
 	roleDescription,
 	location,
+	tech,
 }: WorkExperienceSectionProps) => {
 	return (
 		<section className="flex flex-col w-full">
@@ -87,6 +88,19 @@ const WorkExperienceSection = ({
 			<Reveal width="100%">
 				<div>
 					<p className="mt-4 text-justify">{roleDescription}</p>
+				</div>
+			</Reveal>
+			<Reveal width="100%">
+				<div className="mt-2">
+					{tech &&
+						tech?.map((techItem, index) => (
+							<button
+								key={`${index} + ${techItem}`}
+								className="px-5 py-1 mb-2 mr-2 text-xs text-center text-gray-900 rounded-full bg-gradient-to-r from-green-400 to-teal-400 hover:bg-gradient-to-l hover:from-green-400 hover:to-teal-400"
+							>
+								{techItem}
+							</button>
+						))}
 				</div>
 			</Reveal>
 			<Reveal width="100%">

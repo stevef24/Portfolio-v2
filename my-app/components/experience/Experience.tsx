@@ -37,7 +37,7 @@ const Experience = () => {
 			roleDescription: `Trained in Mixed Martial Arts & Muay Thai in Thailand and
 			Indonesia, immersed in diverse cultures whilst meeting new people,
 			expanding interests & developing interpersonal skills. Gained
-			self-confidence, resilience, focus no need for the comma here, and
+			self-confidence, resilience, focus and
 			stayed physically fit. This experience enhanced personal and
 			professional growth, also providing valuable skills applicable to
 			various aspects of life`,
@@ -95,16 +95,15 @@ const Experience = () => {
 					tech,
 				}) => (
 					<article key={`${companyName}+${role}`}>
-						<Reveal width="100%">
-							<WorkExperienceSection
-								companyName={companyName}
-								dateFrom={dateFrom}
-								dateTo={dateTo}
-								role={role}
-								roleDescription={roleDescription}
-								location={location}
-							/>
-						</Reveal>
+						<WorkExperienceSection
+							companyName={companyName}
+							dateFrom={dateFrom}
+							dateTo={dateTo}
+							role={role}
+							roleDescription={roleDescription}
+							location={location}
+							tech={tech}
+						/>
 					</article>
 				)
 			)}
