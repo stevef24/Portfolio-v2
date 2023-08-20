@@ -1,6 +1,8 @@
 "use client";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
+import Reveal from "../reveal";
+import SectionHeader from "../sectionHeader";
 
 const HorizontalScrollCarousel = () => {
 	const targetRef = useRef<HTMLDivElement | null>(null);
@@ -11,7 +13,10 @@ const HorizontalScrollCarousel = () => {
 	const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
 	return (
-		<section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+		<section ref={targetRef} className="relative h-[300vh] bg-[##0A0A0A]">
+			<Reveal width="100%">
+				<SectionHeader title={"Projects"} order={"flex-row"} />
+			</Reveal>
 			<div className="sticky top-0 flex items-center h-screen overflow-hidden">
 				<motion.div style={{ x }} className="flex gap-4">
 					{cards.map((card) => {

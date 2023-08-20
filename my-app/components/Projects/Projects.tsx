@@ -8,9 +8,6 @@ type Props = {};
 const Projects = (props: Props) => {
 	return (
 		<section>
-			<Reveal width="100%">
-				<SectionHeader title={"Projects"} order={"flex-row"} />
-			</Reveal>
 			<HorizontalScrollCarousel />
 		</section>
 	);
