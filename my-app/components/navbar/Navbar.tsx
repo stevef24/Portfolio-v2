@@ -4,7 +4,7 @@ import NavSlider from "./navSlider";
 import Link from "next/link";
 const Navbar = () => {
 	return (
-		<main className="container ">
+		<main className="container">
 			<nav className="grid items-center h-20 grid-cols-6 gap-3 lg:justify-center ">
 				<div className=" lg:hidden">
 					<ResponsiveMenu />
