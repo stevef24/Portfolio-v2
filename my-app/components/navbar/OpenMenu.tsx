@@ -40,7 +40,7 @@ const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 			}}
 			transition={{ duration: 0.3, ease: "easeInOut" }}
 			exit={{ opacity: 0, x: "-100%", scale: 0.5, borderRadius: "0 50% 50% 0" }}
-			className="absolute top-0 left-0 z-20 w-full h-full bg-background"
+			className="fixed top-0 left-0 z-20 w-full h-full bg-background"
 		>
 			<button
 				onClick={() => {

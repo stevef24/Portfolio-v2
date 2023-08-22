@@ -7,7 +7,7 @@ export default function ResponsiveMenu() {
 	const [isActive, setIsActive] = useState(false);
 
 	return (
-		<main>
+		<>
 			<button
 				onClick={() => {
 					setIsActive(!isActive);
@@ -43,6 +43,6 @@ export default function ResponsiveMenu() {
 			<AnimatePresence mode="wait">
 				{isActive && <OpenMenu setIsActive={setIsActive} isActive={isActive} />}
 			</AnimatePresence>
-		</main>
+		</>
 	);
 }
