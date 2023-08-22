@@ -1,4 +1,4 @@
-import styles from "./CardCarousal.module.css";
+import styles from "./cardCarousal.module.css";
 import LogoContainer from "./Cards/logoContainer";
 
 const CardCarousal = () => {
