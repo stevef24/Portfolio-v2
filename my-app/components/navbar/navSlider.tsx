@@ -10,8 +10,7 @@ const links = [
 		href: "/",
 	},
 	{ id: 2, name: "Blog", href: "/blog" },
-	{ id: 3, name: "Project", href: "/projects" },
-	{ id: 4, name: "About", href: "/about" },
+	{ id: 3, name: "Gallery", href: "/gallery" },
 ];
 
 const NavSlider = () => {
@@ -31,7 +30,13 @@ const NavSlider = () => {
 						{active === link.id && (
 							<motion.span
 								layoutId="green-pill"
-								className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-teal-400 "
+								className={`absolute inset-0 rounded-full ${
+									link.id === 1
+										? "bg-gradient-to-r from-green-400 to-teal-400"
+										: link.id === 2
+										? "bg-gradient-to-r from-rose-700 to-pink-600"
+										: "bg-gradient-to-br from-yellow-600 to-red-600"
+								}`}
 								style={{
 									borderRadius: "9999",
 								}}

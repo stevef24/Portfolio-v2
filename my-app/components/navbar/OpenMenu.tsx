@@ -40,16 +40,16 @@ const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 			}}
 			transition={{ duration: 0.3, ease: "easeInOut" }}
 			exit={{ opacity: 0, x: "-100%", scale: 0.5, borderRadius: "0 50% 50% 0" }}
-			className="fixed top-0 left-0 z-20 w-full h-full bg-background"
+			className="fixed top-0 left-0 z-50 w-full h-full bg-background overflow-y:none"
 		>
 			<button
 				onClick={() => {
 					setIsActive(!isActive);
 				}}
-				className="relative p-4 transition duration-200 ease-in-out transform border rounded-full cursor-pointer group hover:fill-green-500 hover:border hover:border-green-500 top-4 left-7 border-rounded-full hover:rotate-180"
+				className="relative p-4 transition duration-200 ease-in-out transform border border-white rounded-full cursor-pointer group stroke-primary top-4 left-7 border-rounded-full hover:rotate-180"
 			>
 				<svg
-					className="w-4 h-4 fill-primary group-hover:fill-green-500"
+					className="w-4 h-4 stroke-1 fill-primary "
 					version="1.1"
 					id="Capa_1"
 					xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,13 @@ const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 						>
 							<motion.a
 								href={link.href}
-								className="font-bold transition duration-500 ease-linear transform cursor-pointer hover:text-transparent text-primary text-7xl bg-clip-text hover:bg-gradient-to-r from-green-400 to-teal-400"
+								className={`font-bold cursor-pointer hover:text-transparent text-primary text-7xl bg-clip-text hover:${
+									link.id === 1
+										? "bg-gradient-to-r from-green-400 to-teal-400"
+										: link.id === 2
+										? "bg-gradient-to-r from-rose-700 to-pink-600"
+										: "bg-gradient-to-r from-yellow-600 to-red-600"
+								}`}
 								onClick={() => setIsActive(!isActive)}
 							>
 								{link.name}

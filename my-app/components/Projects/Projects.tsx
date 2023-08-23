@@ -6,11 +6,7 @@ import HorizontalScrollCarousel from "../carousal/ProjectCarousal";
 type Props = {};
 
 const Projects = (props: Props) => {
-	return (
-		<section>
-			<HorizontalScrollCarousel />
-		</section>
-	);
+	return <HorizontalScrollCarousel />;
 };
 
 export default Projects;

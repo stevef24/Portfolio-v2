@@ -28,7 +28,7 @@ const Hero = () => {
 						</h2>
 					</Reveal>
 					<Reveal>
-						<p className="text-justify md:text-center ">
+						<p className="mt-20 text-justify md:text-center">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
 							voluptatum hic delectus facilis quaerat, consequuntur eveniet quia
 							assumenda adipisci totam! Lorem ipsum dolor sit amet consectetur

@@ -1,8 +1,8 @@
-import About from "@/components/Tech/About";
 import Hero from "@/components/Hero/hero";
 import Contact from "@/components/Contact/Contact";
 import Projects from "@/components/Projects/Projects";
 import Experience from "@/components/experience/Experience";
+import Tools from "@/components/Tech/Tools";
 
 const Home = () => {
 	return (
@@ -10,7 +10,7 @@ const Home = () => {
 			<Hero />
 			<Projects />
 			<Experience />
-			<About />
+			<Tools />
 			<Contact />
 		</main>
 	);

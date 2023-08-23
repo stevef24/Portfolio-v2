@@ -2,11 +2,10 @@ import Reveal from "../reveal";
 import SectionHeader from "../sectionHeader";
 import CardCarousal from "../cardCarousal";
 
-const About = () => {
+const Tools = () => {
 	return (
 		<section>
 			<SectionHeader title={"Tools"} order={"flex-row"} />
-
 			<div className="container">
 				<Reveal>
 					<p className="mt-6 text-justify md:text-center ">
@@ -27,4 +26,4 @@ const About = () => {
 	);
 };
 
-export default About;
+export default Tools;

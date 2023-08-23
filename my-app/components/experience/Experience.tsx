@@ -85,15 +85,18 @@ const Experience = () => {
 				<SectionHeader title={"Experience"} order={"flex-row-reverse"} />
 			</Reveal>
 			{data.map(
-				({
-					companyName,
-					dateFrom,
-					dateTo,
-					role,
-					roleDescription,
-					location,
-					tech,
-				}) => (
+				(
+					{
+						companyName,
+						dateFrom,
+						dateTo,
+						role,
+						roleDescription,
+						location,
+						tech,
+					},
+					index
+				) => (
 					<article key={`${companyName}+${role}`}>
 						<WorkExperienceSection
 							companyName={companyName}
@@ -103,6 +106,7 @@ const Experience = () => {
 							roleDescription={roleDescription}
 							location={location}
 							tech={tech}
+							order={index % 2 === 0 ? "flex-row" : "flex-row-reverse"}
 						/>
 					</article>
 				)

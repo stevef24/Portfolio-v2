@@ -1,4 +1,5 @@
 "use client";
+
 import OpenMenu from "./OpenMenu";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -17,7 +18,7 @@ export default function ResponsiveMenu() {
 				<svg
 					viewBox="0 0 24 24"
 					xmlns="http://www.w3.org/2000/svg"
-					className="w-8 h-8 transition duration-200 ease-in-out transform hover:rotate-180 hover:stroke-green-500 stroke-primary"
+					className="w-8 h-8 transition duration-200 ease-in-out transform hover:rotate-180 stroke-primary"
 				>
 					<path
 						d="M4 18L20 18"

@@ -5,9 +5,14 @@ import { motion, useInView, useAnimation } from "framer-motion";
 type Props = {
 	children: JSX.Element;
 	width?: "fit-content" | "100%";
+	gradient?: string;
 };
 
-export default function Reveal({ children, width = "fit-content" }: Props) {
+export default function Reveal({
+	children,
+	width = "fit-content",
+	gradient = "bg-gradient-to-r from-green-400 to-teal-400",
+}: Props) {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true });
 	const mainControls = useAnimation();
@@ -53,7 +58,7 @@ export default function Reveal({ children, width = "fit-content" }: Props) {
 					right: 0,
 					zIndex: 20,
 				}}
-				className="bg-gradient-to-r from-green-400 to-teal-400"
+				className={gradient}
 			></motion.div>
 		</div>
 	);
