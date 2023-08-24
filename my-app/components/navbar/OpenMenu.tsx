@@ -18,8 +18,8 @@ const links = [
 	},
 	{
 		id: 3,
-		name: "Projects",
-		href: "/projects",
+		name: "Gallery",
+		href: "/gallery",
 	},
 ];
 
@@ -40,7 +40,7 @@ const OpenMenu = ({ setIsActive, isActive }: OpenMenuProps) => {
 			}}
 			transition={{ duration: 0.3, ease: "easeInOut" }}
 			exit={{ opacity: 0, x: "-100%", scale: 0.5, borderRadius: "0 50% 50% 0" }}
-			className="fixed top-0 left-0 z-50 w-full h-full bg-background overflow-y:none"
+			className="fixed top-0 left-0 z-50 w-full h-full bg-background overflow-y:hidden"
 		>
 			<button
 				onClick={() => {

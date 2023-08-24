@@ -56,7 +56,7 @@ export default function Reveal({
 					bottom: 4,
 					left: 0,
 					right: 0,
-					zIndex: 20,
+					zIndex: 15,
 				}}
 				className={gradient}
 			></motion.div>

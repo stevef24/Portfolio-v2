@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const links = [
 	{
@@ -14,7 +15,9 @@ const links = [
 ];
 
 const NavSlider = () => {
-	let [active, setActive] = useState(links[0].id);
+	const path = usePathname();
+
+	let [active, setActive] = useState(path);
 	return (
 		<div>
 			<div className="justify-center hidden lg:col-span-4 lg:flex">
@@ -22,12 +25,12 @@ const NavSlider = () => {
 					<Link
 						href={link.href}
 						key={link.id}
-						onClick={() => setActive(link.id)}
+						onClick={() => setActive(link.href)}
 						className={`${
-							active === link.id ? "" : "hover:opacity-50"
+							active === link.href ? "" : "hover:opacity-50"
 						} relative rounded-full px-3 py-1.5 text-sm font-medium text0white outline-2 outline-green-500 focus-visible:outline`}
 					>
-						{active === link.id && (
+						{active === link.href && (
 							<motion.span
 								layoutId="green-pill"
 								className={`absolute inset-0 rounded-full ${
