@@ -1,3 +1,4 @@
+import ThreeModel from "@/components/blog/BlogThreeModel";
 import Reveal from "@/components/reveal";
 
 const Blog = () => {
@@ -34,6 +35,9 @@ const Blog = () => {
 						</span>
 					</h2>
 				</Reveal>
+				<div className="w-[400px] h-[400px] ">
+					<ThreeModel />
+				</div>
 			</div>
 		</section>
 	);
