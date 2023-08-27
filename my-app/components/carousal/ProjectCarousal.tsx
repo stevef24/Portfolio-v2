@@ -29,29 +29,15 @@ const HorizontalScrollCarousel = () => {
 
 const Card = ({ card }: { card: CardType }) => {
 	return (
-		<div className="group relative p-0.5 overflow-hidden bg-background rounded-lg z-1">
-			<div className="absolute inset-0 scale-150 z-2 group-hover:bg-gradient-to-r from-green-400 to-teal-400 group-hover:animate-spin" />
+		<div className="group relative p-0.5 overflow-hidden bg-background rounded-lg z-1 ">
+			<div className="absolute right-0 z-10 opacity-50 -bottom-0 w-60 h-60 blur-3xl group-hover:bg-green-500 animate-blob "></div>
+			<div className="absolute z-10 opacity-50 -bottom-10 w-60 h-60 blur-3xl group-hover:bg-teal-500 animate-blob "></div>
 			<div className="md:h-[500px] md:w-[400px] h-[350px] w-[250px] z-3 relative bg-[#18181c]  rounded-lg flex justify-center items-center">
 				hello
 			</div>
 		</div>
 	);
 };
-
-{
-	// <div className="absolute top-24 group-hover:inline-block">
-	// 	<SvgShape />
-	// </div>
-	/* <motion.div
-key={card.id}
-className="group relative md:h-[500px] md:w-[400px] h-[350px] w-[250px] overflow-hidden rounded-xl bg-background dark:bg-[#18181b] p-2 z-1"
->
-<div className="absolute inset-0 scale-150 z-2 hover:bg-gradient-to-r from-green-400 to-teal-400 "></div>
-<div className="absolute inset-x-0 bottom-0 duration-200 opacity-0 group-hover:opacity-100 group-hover:transition-opacity z-3 ">
-	
-</div>
-</motion.div> */
-}
 
 const SvgShape = () => {
 	return (
