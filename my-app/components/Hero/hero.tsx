@@ -7,7 +7,7 @@ const Hero = () => {
 	const Spline = dynamic(() => import("./ThreeModel"), { ssr: false });
 	return (
 		<section className="px-8 py-24 overflow-hidden text-primary md:px-12 md:py-12">
-			<div className="flex flex-col items-center justify-center space-y-10">
+			<div className="flex flex-col items-center justify-center space-y-2">
 				<div>
 					<Reveal>
 						<h1 className="text-5xl font-bold md:text-6xl lg:text-8xl">
@@ -28,7 +28,7 @@ const Hero = () => {
 						</h2>
 					</Reveal>
 					<Reveal>
-						<p className="mt-20 text-justify md:text-center">
+						<p className="mt-10 mb-4 text-justify md:text-center">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
 							voluptatum hic delectus facilis quaerat, consequuntur eveniet quia
 							assumenda adipisci totam! Lorem ipsum dolor sit amet consectetur
