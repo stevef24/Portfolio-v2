@@ -32,7 +32,7 @@ const Card = ({ card }: { card: CardType }) => {
 		<div className="group relative p-0.5 overflow-hidden bg-background rounded-lg z-1 ">
 			<div className="absolute right-0 z-10 w-32 h-32 opacity-50 -bottom-0 md:w-60 md:h-60 blur-3xl group-hover:bg-green-500 animate-blob "></div>
 			<div className="absolute z-10 opacity-50 -bottom-10 w-60 h-60 blur-3xl group-hover:bg-teal-500 animate-blob "></div>
-			<div className="md:h-[500px] md:w-[400px] h-[350px] w-[250px] z-3 relative bg-[#18181c]  rounded-lg flex justify-center items-center">
+			<div className="md:h-[500px] md:w-[400px] h-[350px] w-[250px] z-3 relative dark:bg-[#18181c] bg-background rounded-lg flex justify-center items-center dark:border-none  border border-black-1">
 				hello
 			</div>
 		</div>
